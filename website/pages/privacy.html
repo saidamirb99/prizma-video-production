@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности — PRIZMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .privacy-page { padding: 140px 0 100px; }
+        .privacy-page h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            margin-bottom: 32px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .privacy-page p {
+            color: var(--text-2);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        .privacy-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-2);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        .privacy-back:hover { color: var(--text); }
+    </style>
+</head>
+<body>
+    <nav class="nav scrolled">
+        <div class="nav__inner">
+            <a href="../index.html" class="nav__logo">PRIZMA</a>
+            <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="../index.html">ГЛАВНАЯ</a></li>
+                <li><a href="../index.html#portfolio">ПОРТФОЛИО</a></li>
+                <li><a href="../index.html#services">УСЛУГИ</a></li>
+                <li><a href="../index.html#reviews">ОТЗЫВЫ</a></li>
+                <li><a href="../index.html#contacts">КОНТАКТЫ</a></li>
+            </ul>
+            <a href="tel:+998999335333" class="nav__phone">+998 99 933 53 33</a>
+        </div>
+    </nav>
+
+    <section class="privacy-page">
+        <div class="container">
+            <a href="../index.html" class="privacy-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                ВЕРНУТЬСЯ К САЙТУ
+            </a>
+            <h1>Политика конфиденциальности</h1>
+            <p>Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных.</p>
+            <p>Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта PRIZMA.</p>
+            <p>Мы собираем только те данные, которые необходимы для связи с вами и обработки вашего запроса: имя, контактный телефон или email, а также информацию о проекте, которую вы предоставляете через форму обратной связи.</p>
+            <p>Ваши данные не передаются третьим лицам и используются исключительно для обработки ваших обращений и улучшения качества нашего сервиса.</p>
+            <p>Продолжая использование сайта, вы соглашаетесь с условиями настоящей политики.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo">PRIZMA</span>
+                <p>Воплощаем ваши идеи в реальность!</p>
+            </div>
+            <div class="footer__copy">&copy; 2024 PRIZMA. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('navMenu');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    </script>
+</body>
+</html>
