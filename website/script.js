@@ -4,12 +4,9 @@
 
 // ---- Nav scroll effect ----
 const nav = document.getElementById('nav');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    nav.classList.toggle('scrolled', scrollY > 60);
-    lastScroll = scrollY;
+    nav.classList.toggle('scrolled', window.scrollY > 60);
 });
 
 // ---- Mobile menu ----
@@ -52,7 +49,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 // ---- Counter animation ----
-const counters = document.querySelectorAll('.neu-card__number');
+const counters = document.querySelectorAll('.stats-bar__number');
 let counterAnimated = false;
 
 const counterObserver = new IntersectionObserver((entries) => {
@@ -65,7 +62,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 if (counters.length > 0) {
-    counterObserver.observe(counters[0].closest('.stats'));
+    counterObserver.observe(counters[0].closest('.stats-bar'));
 }
 
 function animateCounters() {
@@ -77,33 +74,46 @@ function animateCounters() {
         function update(now) {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
             const eased = 1 - Math.pow(1 - progress, 3);
             counter.textContent = Math.round(target * eased);
-
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            }
+            if (progress < 1) requestAnimationFrame(update);
         }
 
         requestAnimationFrame(update);
     });
 }
 
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq__question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq__item');
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq__item.active').forEach(el => {
+            el.classList.remove('active');
+            el.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+
 // ---- Floating particles ----
 const particlesContainer = document.getElementById('particles');
 
 function createParticles() {
-    const count = window.innerWidth < 768 ? 20 : 40;
+    const count = window.innerWidth < 768 ? 15 : 30;
 
     for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
-        const size = Math.random() * 3 + 1;
+        const size = Math.random() * 2.5 + 1;
         const x = Math.random() * 100;
         const y = Math.random() * 100;
         const duration = Math.random() * 20 + 15;
         const delay = Math.random() * 10;
-        const hue = Math.random() > 0.5 ? 270 : 190;
 
         particle.style.cssText = `
             position: absolute;
@@ -111,7 +121,7 @@ function createParticles() {
             height: ${size}px;
             left: ${x}%;
             top: ${y}%;
-            background: hsla(${hue}, 70%, 60%, ${Math.random() * 0.3 + 0.1});
+            background: hsla(20, 90%, 60%, ${Math.random() * 0.2 + 0.05});
             border-radius: 50%;
             animation: float ${duration}s ${delay}s ease-in-out infinite;
             pointer-events: none;
@@ -121,20 +131,19 @@ function createParticles() {
     }
 }
 
-// Add float keyframes
 const style = document.createElement('style');
 style.textContent = `
     @keyframes float {
-        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-        25% { transform: translate(${rand()}px, ${rand()}px) scale(1.2); opacity: 0.6; }
-        50% { transform: translate(${rand()}px, ${rand()}px) scale(0.8); opacity: 0.2; }
-        75% { transform: translate(${rand()}px, ${rand()}px) scale(1.1); opacity: 0.5; }
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+        25% { transform: translate(${rand()}px, ${rand()}px) scale(1.2); opacity: 0.4; }
+        50% { transform: translate(${rand()}px, ${rand()}px) scale(0.8); opacity: 0.15; }
+        75% { transform: translate(${rand()}px, ${rand()}px) scale(1.1); opacity: 0.35; }
     }
 `;
 document.head.appendChild(style);
 
 function rand() {
-    return Math.round((Math.random() - 0.5) * 80);
+    return Math.round((Math.random() - 0.5) * 60);
 }
 
 createParticles();
@@ -150,7 +159,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ---- Tilt effect on glass cards (desktop only) ----
+// ---- Tilt effect on cards (desktop only) ----
 if (window.innerWidth > 768) {
     document.querySelectorAll('.glass-card, .work-card, .portfolio-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -161,8 +170,8 @@ if (window.innerWidth > 768) {
             card.style.transform = `
                 translateY(-4px)
                 perspective(800px)
-                rotateX(${y * -4}deg)
-                rotateY(${x * 4}deg)
+                rotateX(${y * -3}deg)
+                rotateY(${x * 3}deg)
             `;
         });
 

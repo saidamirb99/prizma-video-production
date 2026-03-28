@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRIZMA — Яркие моменты, запечатленные в каждом кадре</title>
-    <meta name="description" content="Профессиональная фото и видеосъемка для любых событий и проектов. Захватываем искренние эмоции, создаем стильные кадры и превращаем моменты в незабываемые визуальные истории.">
+    <meta name="description" content="Профессиональная фото и видеосъемка для любых событий и проектов.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav class="nav" id="nav">
         <div class="nav__inner">
             <a href="#hero" class="nav__logo">PRIZMA</a>
@@ -20,13 +20,14 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav__menu" id="navMenu">
-                <li><a href="#hero">ГЛАВНАЯ</a></li>
-                <li><a href="#portfolio">ПОРТФОЛИО</a></li>
-                <li><a href="#services">УСЛУГИ</a></li>
-                <li><a href="#reviews">ОТЗЫВЫ</a></li>
-                <li><a href="#contacts">КОНТАКТЫ</a></li>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#works">Работы</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
-            <a href="tel:+998999335333" class="nav__phone">+998 99 933 53 33</a>
+            <a href="#contacts" class="nav__cta btn btn--primary btn--sm">Обсудить проект</a>
         </div>
     </nav>
 
@@ -36,70 +37,66 @@
             <div class="hero__gradient"></div>
             <div class="hero__particles" id="particles"></div>
         </div>
-        <div class="hero__content">
-            <div class="hero__badge reveal">PHOTO & VIDEO PRODUCTION</div>
-            <h1 class="hero__title reveal">
-                <span class="hero__title-line">PRI</span><span class="hero__title-accent">Z</span><span class="hero__title-line">MA</span>
-            </h1>
-            <p class="hero__subtitle reveal">Яркие моменты, запечатленные в каждом кадре</p>
-            <p class="hero__desc reveal">Профессиональная фото и видеосъемка для любых событий и проектов</p>
-            <a href="#works" class="btn btn--primary reveal">
-                <span>СМОТРЕТЬ РАБОТЫ</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+        <div class="container hero__container">
+            <div class="hero__left">
+                <div class="hero__badge reveal">PHOTO & VIDEO PRODUCTION</div>
+                <h1 class="hero__title reveal">
+                    <span class="hero__title-line">PRI</span><span class="hero__title-accent">Z</span><span class="hero__title-line">MA</span>
+                </h1>
+                <p class="hero__subtitle reveal">Яркие моменты, запечатленные в каждом кадре</p>
+                <p class="hero__desc reveal">Профессиональная фото и видеосъемка для любых событий и проектов. Создаём контент, который вдохновляет.</p>
+                <div class="hero__buttons reveal">
+                    <a href="#works" class="btn btn--primary">
+                        <span>СМОТРЕТЬ РАБОТЫ</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+998999335333" class="btn btn--ghost">+998 99 933 53 33</a>
+                </div>
+            </div>
+            <div class="hero__right reveal">
+                <div class="hero__visual">
+                    <div class="hero__visual-card">
+                        <div class="hero__visual-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                        </div>
+                    </div>
+                    <div class="hero__visual-float hero__visual-float--1">
+                        <span class="hero__float-number">100+</span>
+                        <span class="hero__float-label">проектов</span>
+                    </div>
+                    <div class="hero__visual-float hero__visual-float--2">
+                        <span class="hero__float-tag">4K</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="hero__scroll">
             <div class="hero__scroll-line"></div>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
+    <!-- STATS BAR -->
+    <section class="stats-bar">
         <div class="container">
-            <h2 class="section__label reveal">О НАС</h2>
-            <div class="about__grid">
-                <div class="glass-card reveal">
-                    <div class="glass-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><defs><linearGradient id="grad1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
-                    </div>
-                    <p>Мы — команда экспертов в фото и видео продакшене.</p>
+            <div class="stats-bar__grid">
+                <div class="stats-bar__item reveal">
+                    <span class="stats-bar__number" data-target="8">0</span><span class="stats-bar__plus">+</span>
+                    <span class="stats-bar__label">лет опыта</span>
                 </div>
-                <div class="glass-card reveal" style="animation-delay:.1s">
-                    <div class="glass-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <p>Более 8 лет создаём яркие рекламные ролики для международных брендов, предлагая полный спектр услуг.</p>
+                <div class="stats-bar__divider"></div>
+                <div class="stats-bar__item reveal" style="animation-delay:.1s">
+                    <span class="stats-bar__number" data-target="10">0</span><span class="stats-bar__plus">+</span>
+                    <span class="stats-bar__label">специалистов</span>
                 </div>
-                <div class="glass-card reveal" style="animation-delay:.2s">
-                    <div class="glass-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
-                    <p>Вдохновляем, создаём и достигаем результатов как в Узбекистане, так и за его границами.</p>
+                <div class="stats-bar__divider"></div>
+                <div class="stats-bar__item reveal" style="animation-delay:.2s">
+                    <span class="stats-bar__number" data-target="50">0</span><span class="stats-bar__plus">+</span>
+                    <span class="stats-bar__label">брендов</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="section stats" id="stats">
-        <div class="container">
-            <h2 class="section__label reveal">НАША КОМАНДА В ЦИФРАХ</h2>
-            <div class="stats__grid">
-                <div class="neu-card reveal">
-                    <span class="neu-card__number" data-target="8">0</span><span class="neu-card__plus">+</span>
-                    <span class="neu-card__label">лет опыта</span>
-                </div>
-                <div class="neu-card reveal" style="animation-delay:.1s">
-                    <span class="neu-card__number" data-target="10">0</span><span class="neu-card__plus">+</span>
-                    <span class="neu-card__label">специалистов</span>
-                </div>
-                <div class="neu-card reveal" style="animation-delay:.2s">
-                    <span class="neu-card__number" data-target="50">0</span><span class="neu-card__plus">+</span>
-                    <span class="neu-card__label">брендов и организаций</span>
-                </div>
-                <div class="neu-card reveal" style="animation-delay:.3s">
-                    <span class="neu-card__number" data-target="100">0</span><span class="neu-card__plus">+</span>
-                    <span class="neu-card__label">крупных проектов</span>
+                <div class="stats-bar__divider"></div>
+                <div class="stats-bar__item reveal" style="animation-delay:.3s">
+                    <span class="stats-bar__number" data-target="100">0</span><span class="stats-bar__plus">+</span>
+                    <span class="stats-bar__label">проектов</span>
                 </div>
             </div>
         </div>
@@ -108,44 +105,53 @@
     <!-- WORKS -->
     <section class="section works" id="works">
         <div class="container">
-            <h2 class="section__label reveal">НАШИ РАБОТЫ</h2>
+            <div class="section__header">
+                <div>
+                    <h2 class="section__label reveal">НАШИ РАБОТЫ</h2>
+                    <p class="section__subtitle reveal">Избранные проекты нашей команды</p>
+                </div>
+                <a href="#portfolio" class="btn btn--outline btn--sm reveal">ВСЕ РАБОТЫ</a>
+            </div>
             <div class="works__grid">
-                <div class="work-card reveal">
+                <div class="work-card work-card--featured reveal">
                     <div class="work-card__thumb">
                         <div class="work-card__placeholder" style="--hue:270"></div>
                         <div class="work-card__overlay">
                             <div class="work-card__play">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
                             </div>
                         </div>
+                        <div class="work-card__badge">Реклама</div>
                     </div>
                     <div class="work-card__info">
                         <h3>UZTELECOM NEW YEAR</h3>
                         <span>Рекламный ролик</span>
                     </div>
                 </div>
-                <div class="work-card reveal" style="animation-delay:.15s">
+                <div class="work-card reveal" style="animation-delay:.1s">
                     <div class="work-card__thumb">
                         <div class="work-card__placeholder" style="--hue:190"></div>
                         <div class="work-card__overlay">
                             <div class="work-card__play">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
                             </div>
                         </div>
+                        <div class="work-card__badge">Промо</div>
                     </div>
                     <div class="work-card__info">
                         <h3>CARVON PROMOTIONAL</h3>
                         <span>Промо видео</span>
                     </div>
                 </div>
-                <div class="work-card reveal" style="animation-delay:.3s">
+                <div class="work-card reveal" style="animation-delay:.2s">
                     <div class="work-card__thumb">
                         <div class="work-card__placeholder" style="--hue:330"></div>
                         <div class="work-card__overlay">
                             <div class="work-card__play">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
                             </div>
                         </div>
+                        <div class="work-card__badge">Спорт</div>
                     </div>
                     <div class="work-card__info">
                         <h3>BUKA GYM</h3>
@@ -156,33 +162,158 @@
         </div>
     </section>
 
-    <!-- CTA BLOCKS -->
-    <section class="section cta-blocks">
+    <!-- ABOUT -->
+    <section class="section about" id="about">
         <div class="container">
-            <div class="cta-blocks__grid">
-                <div class="cta-block glass-card reveal">
-                    <div class="cta-block__icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    </div>
-                    <h3>Портфолио</h3>
-                    <p>Наши лучшие работы — вдохновляйтесь!</p>
-                    <a href="#portfolio" class="btn btn--outline">ПЕРЕЙТИ</a>
+            <div class="about__layout">
+                <div class="about__text reveal">
+                    <h2 class="section__label section__label--left">О СТУДИИ</h2>
+                    <p class="about__lead">Мы — команда экспертов в фото и видео продакшене с опытом более 8 лет.</p>
+                    <p class="about__body">Создаём яркие рекламные ролики для международных брендов, предлагая полный спектр услуг — от разработки концепции до финальной постпродакшн. Вдохновляем, создаём и достигаем результатов как в Узбекистане, так и за его границами.</p>
+                    <a href="#services" class="btn btn--outline btn--sm">ПОДРОБНЕЕ</a>
                 </div>
-                <div class="cta-block glass-card reveal" style="animation-delay:.1s">
-                    <div class="cta-block__icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <div class="about__cards">
+                    <div class="about__card glass-card reveal">
+                        <div class="about__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                        </div>
+                        <h4>Видеопродакшн</h4>
+                        <p>Полный цикл создания видеоконтента</p>
                     </div>
-                    <h3>Услуги</h3>
-                    <p>Съемка для любого события и проекта.</p>
-                    <a href="#services" class="btn btn--outline">ПЕРЕЙТИ</a>
+                    <div class="about__card glass-card reveal" style="animation-delay:.1s">
+                        <div class="about__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                        </div>
+                        <h4>Фотосъёмка</h4>
+                        <p>Профессиональная съёмка любого формата</p>
+                    </div>
+                    <div class="about__card glass-card reveal" style="animation-delay:.2s">
+                        <div class="about__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h4>Постпродакшн</h4>
+                        <p>Монтаж, графика, цвет и спецэффекты</p>
+                    </div>
                 </div>
-                <div class="cta-block glass-card reveal" style="animation-delay:.2s">
-                    <div class="cta-block__icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section__label reveal">НАШИ УСЛУГИ</h2>
+            <p class="section__desc reveal">Полный спектр услуг для создания визуального контента</p>
+
+            <div class="services__grid">
+                <div class="service-card glass-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
                     </div>
-                    <h3>Контакты</h3>
-                    <p>Свяжитесь с нами — обсудим вашу идею!</p>
-                    <a href="#contacts" class="btn btn--outline">ПЕРЕЙТИ</a>
+                    <h3>Рекламные ролики</h3>
+                    <p>Коммерческая и социальная реклама для ТВ и интернета</p>
+                </div>
+                <div class="service-card glass-card reveal" style="animation-delay:.06s">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg>
+                    </div>
+                    <h3>Видеопрезентации</h3>
+                    <p>Информационные ролики и презентации для бизнеса</p>
+                </div>
+                <div class="service-card glass-card reveal" style="animation-delay:.12s">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
+                    </div>
+                    <h3>Спортивные видео</h3>
+                    <p>Динамичные съёмки соревнований и тренировок</p>
+                </div>
+                <div class="service-card glass-card reveal" style="animation-delay:.18s">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </div>
+                    <h3>Фотосъёмка</h3>
+                    <p>Репортажная, студийная, коммерческая и предметная</p>
+                </div>
+                <div class="service-card glass-card reveal" style="animation-delay:.24s">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"/></svg>
+                    </div>
+                    <h3>Креативный контент</h3>
+                    <p>Нестандартные решения и уникальные концепции</p>
+                </div>
+                <div class="service-card glass-card reveal" style="animation-delay:.3s">
+                    <div class="service-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Корпоративные фильмы</h3>
+                    <p>Мероприятия, конференции, корпоративы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+        <div class="container">
+            <h2 class="section__label reveal">КАК МЫ РАБОТАЕМ</h2>
+            <p class="section__desc reveal">7 шагов от идеи до готового результата</p>
+
+            <div class="process__grid">
+                <div class="process__step reveal">
+                    <div class="process__step-top">
+                        <span class="process__num">01</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Заявка</h3>
+                    <p>Вы оставляете заявку — мы обсуждаем вашу идею</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.07s">
+                    <div class="process__step-top">
+                        <span class="process__num">02</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Бриф</h3>
+                    <p>Определяем цели, формат и бюджет проекта</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.14s">
+                    <div class="process__step-top">
+                        <span class="process__num">03</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Сценарий</h3>
+                    <p>Разрабатываем сценарий или дорабатываем ваши идеи</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.21s">
+                    <div class="process__step-top">
+                        <span class="process__num">04</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Подготовка</h3>
+                    <p>Локации, актёры, техника и организация</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.28s">
+                    <div class="process__step-top">
+                        <span class="process__num">05</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Съёмка</h3>
+                    <p>Профессиональная съёмка с нашей командой</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.35s">
+                    <div class="process__step-top">
+                        <span class="process__num">06</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Монтаж</h3>
+                    <p>Монтаж, озвучка, графика и спецэффекты</p>
+                </div>
+                <div class="process__step reveal" style="animation-delay:.42s">
+                    <div class="process__step-top">
+                        <span class="process__num">07</span>
+                        <div class="process__line"></div>
+                    </div>
+                    <h3>Результат</h3>
+                    <p>Готовый продукт с возможностью правок</p>
                 </div>
             </div>
         </div>
@@ -192,162 +323,65 @@
     <section class="section portfolio" id="portfolio">
         <div class="container">
             <h2 class="section__label reveal">ПОРТФОЛИО</h2>
-            <p class="section__desc reveal">Добро пожаловать в наше портфолио — здесь собраны лучшие моменты, запечатленные нашей командой.</p>
+            <p class="section__desc reveal">Лучшие моменты, запечатленные нашей командой</p>
 
-            <h3 class="portfolio__cat-title reveal">Фото</h3>
+            <h3 class="portfolio__cat-title reveal">ФОТО</h3>
             <div class="portfolio__grid">
                 <a href="pages/gallery.html?cat=reportazhnaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:260"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Репортажная фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Репортажная фотосъёмка</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=kommercheskaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:200"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Коммерческая фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Коммерческая фотосъёмка</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=studiynaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:170"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Студийная фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Студийная фотосъёмка</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=interiernaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:300"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Интерьерная фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Интерьерная фотосъёмка</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=predmetnaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:30"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Предметная фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Предметная фотосъёмка</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=sportivnaya-fotosemka" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:140"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Фото</span>
-                        <h4>Спортивная фотосъёмка</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Фото</span><h4>Спортивная фотосъёмка</h4></div>
                 </a>
             </div>
 
-            <h3 class="portfolio__cat-title reveal">Видео</h3>
+            <h3 class="portfolio__cat-title reveal">ВИДЕО</h3>
             <div class="portfolio__grid portfolio__grid--3">
                 <a href="pages/gallery.html?cat=kommercheskie-video" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:270"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Видео</span>
-                        <h4>Коммерческие видео</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Видео</span><h4>Коммерческие видео</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=reportazhnye-video" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:190"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Видео</span>
-                        <h4>Репортажные видео</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Видео</span><h4>Репортажные видео</h4></div>
                 </a>
                 <a href="pages/gallery.html?cat=rilsy" class="portfolio-card reveal">
                     <div class="portfolio-card__bg" style="--hue:330"></div>
-                    <div class="portfolio-card__content">
-                        <span class="portfolio-card__tag">Видео</span>
-                        <h4>Рилсы</h4>
-                    </div>
+                    <div class="portfolio-card__content"><span class="portfolio-card__tag">Видео</span><h4>Рилсы</h4></div>
                 </a>
             </div>
-
-            <p class="section__desc section__desc--bottom reveal">Мы снимаем с душой и вниманием к деталям, чтобы каждая фотография и видео передавали атмосферу, эмоции и уникальность вашего события. От ярких репортажей до художественных постановок — в нашей работе важен каждый кадр. Вдохновляйтесь, изучайте примеры, и, возможно, следующий проект, который украсит эту галерею, будет именно вашим.</p>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section services" id="services">
+    <!-- PARTNERS -->
+    <section class="section partners-section">
         <div class="container">
-            <h2 class="section__label reveal">НАШИ УСЛУГИ</h2>
-            <div class="services__grid">
-                <div class="glass-card glass-card--lg reveal">
-                    <h3 class="glass-card__title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
-                        Видеоуслуги
-                    </h3>
-                    <ul class="services__list">
-                        <li>Коммерческая и социальная реклама для ТВ и интернета</li>
-                        <li>Видеопрезентации и информационные ролики</li>
-                        <li>Спортивные видео</li>
-                        <li>Съемка с участием актеров и знаменитостей</li>
-                        <li>Креативные ролики и нестандартные решения для бизнеса</li>
-                        <li>Корпоративные фильмы</li>
-                        <li>Студийная видеосъемка с хромакеем</li>
-                        <li>Съемка мероприятий и конференций</li>
-                    </ul>
-                </div>
-                <div class="glass-card glass-card--lg reveal" style="animation-delay:.15s">
-                    <h3 class="glass-card__title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                        Фотоуслуги
-                    </h3>
-                    <ul class="services__list">
-                        <li>Корпоративные фото с мероприятий</li>
-                        <li>Репортажная фотосъемка</li>
-                        <li>Студийные фотосессии</li>
-                        <li>Рекламная и имиджевая съемка</li>
-                        <li>Fashion и magazine фотосъемка</li>
-                        <li>Интерьерная съемка</li>
-                        <li>Корпоративная фотосессия</li>
-                        <li>Спортивная фотосъемка</li>
-                        <li>Предметная и фуд-съемка</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="glass-card glass-card--wide reveal">
-                <h3 class="glass-card__title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    Что мы можем для вас сделать
-                </h3>
-                <div class="services__capabilities">
-                    <div class="capability">
-                        <span class="capability__num">01</span>
-                        <p>Разработать сценарий для видео с нуля или доработать ваши идеи</p>
-                    </div>
-                    <div class="capability">
-                        <span class="capability__num">02</span>
-                        <p>Подобрать оптимальное решение под цели и бюджет</p>
-                    </div>
-                    <div class="capability">
-                        <span class="capability__num">03</span>
-                        <p>Организовать все — от актеров и локаций до техники и декораций</p>
-                    </div>
-                    <div class="capability">
-                        <span class="capability__num">04</span>
-                        <p>Смонтировать, озвучить ролик, добавить графику и спецэффекты</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Partners -->
-            <div class="glass-card glass-card--wide partners reveal">
-                <h3 class="glass-card__title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    С нами сотрудничают
-                </h3>
-                <div class="partners__grid">
-                    <div class="partner-logo neu-card"><span>UZTELECOM</span></div>
-                    <div class="partner-logo neu-card"><span>CARVON</span></div>
-                    <div class="partner-logo neu-card"><span>BUKA</span></div>
-                    <div class="partner-logo neu-card"><span>CLIENT</span></div>
-                    <div class="partner-logo neu-card"><span>BRAND</span></div>
-                    <div class="partner-logo neu-card"><span>PARTNER</span></div>
-                </div>
+            <h2 class="section__label reveal">С НАМИ СОТРУДНИЧАЮТ</h2>
+            <div class="partners__grid reveal">
+                <div class="partner-logo"><span>UZTELECOM</span></div>
+                <div class="partner-logo"><span>CARVON</span></div>
+                <div class="partner-logo"><span>BUKA</span></div>
+                <div class="partner-logo"><span>CLIENT</span></div>
+                <div class="partner-logo"><span>BRAND</span></div>
+                <div class="partner-logo"><span>PARTNER</span></div>
             </div>
         </div>
     </section>
@@ -355,18 +389,103 @@
     <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
         <div class="container">
-            <h2 class="section__label reveal">ОТЗЫВЫ</h2>
-            <div class="reviews__wrapper">
-                <div class="glass-card glass-card--review reveal">
-                    <div class="review__quote">"</div>
-                    <p class="review__text">Супер! Очень теплые и душевные кадры. Они действительно передали всю атмосферу нашего увлекательного процесса!</p>
-                    <div class="review__author">
-                        <div class="review__avatar">С</div>
-                        <span>Сожида</span>
+            <h2 class="section__label reveal">ОТЗЫВЫ КЛИЕНТОВ</h2>
+            <div class="reviews__grid">
+                <div class="review-card glass-card reveal">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text">Супер! Очень теплые и душевные кадры. Они действительно передали всю атмосферу нашего увлекательного процесса!</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">С</div>
+                        <div>
+                            <span class="review-card__name">Сожида</span>
+                            <span class="review-card__role">Клиент</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card glass-card reveal" style="animation-delay:.1s">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text">Профессиональный подход и отличное качество. Ролик получился именно таким, как мы задумывали. Рекомендуем!</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">А</div>
+                        <div>
+                            <span class="review-card__name">Азиз</span>
+                            <span class="review-card__role">Директор компании</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card glass-card reveal" style="animation-delay:.2s">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text">Быстро, качественно и креативно. Команда PRIZMA понимает задачу с полуслова и выдаёт результат выше ожиданий.</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">М</div>
+                        <div>
+                            <span class="review-card__name">Малика</span>
+                            <span class="review-card__role">Маркетолог</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="btn btn--outline reveal">ОСТАВИТЬ ОТЗЫВ</button>
+            <div class="reviews__cta reveal">
+                <button class="btn btn--outline">ОСТАВИТЬ ОТЗЫВ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section__label reveal">ЧАСТЫЕ ВОПРОСЫ</h2>
+            <div class="faq__list">
+                <div class="faq__item reveal">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Сколько стоит видеоролик?</span>
+                        <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq__answer"><p>Стоимость зависит от формата, сложности и продолжительности. Свяжитесь с нами для индивидуального расчёта — мы подберём оптимальное решение под ваш бюджет.</p></div>
+                </div>
+                <div class="faq__item reveal" style="animation-delay:.06s">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Сколько времени занимает производство?</span>
+                        <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq__answer"><p>Короткий ролик — от 5 рабочих дней, крупный проект — от 2-4 недель. Точные сроки обсуждаем на этапе брифа.</p></div>
+                </div>
+                <div class="faq__item reveal" style="animation-delay:.12s">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Можно ли внести правки в готовый ролик?</span>
+                        <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq__answer"><p>Да, в стоимость входит до 2 раундов правок. Мы работаем до полного удовлетворения результатом.</p></div>
+                </div>
+                <div class="faq__item reveal" style="animation-delay:.18s">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Работаете ли вы за пределами Узбекистана?</span>
+                        <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq__answer"><p>Да, мы реализуем проекты как в Узбекистане, так и за его пределами.</p></div>
+                </div>
+                <div class="faq__item reveal" style="animation-delay:.24s">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Нужен ли мне готовый сценарий?</span>
+                        <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq__answer"><p>Нет, мы можем разработать сценарий с нуля. Достаточно рассказать о задаче — мы предложим решение.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner__inner reveal">
+                <h2>Готовы обсудить проект?</h2>
+                <p>Расскажите о своей идее — мы предложим лучшее решение</p>
+                <div class="cta-banner__buttons">
+                    <a href="#contacts" class="btn btn--primary">ОСТАВИТЬ ЗАЯВКУ</a>
+                    <a href="https://t.me/Javamir" target="_blank" class="btn btn--ghost">НАПИСАТЬ В TELEGRAM</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -374,44 +493,48 @@
     <section class="section contacts" id="contacts">
         <div class="container">
             <h2 class="section__label reveal">КОНТАКТЫ</h2>
-            <p class="section__desc reveal">Расскажите о своем проекте, и мы сделаем его незабываемым!</p>
             <div class="contacts__grid">
-                <form class="contact-form glass-card glass-card--lg reveal" onsubmit="return false">
-                    <p class="contact-form__intro">Мы всегда на связи, чтобы обсудить вашу идею, помочь с выбором формата съемки и создать результат, который будет Вас вдохновлять. Пишите нам, звоните или оставьте заявку через форму — мы ответим вам в ближайшее время. Вместе мы воплотим ваши идеи в кадре!</p>
-                    <div class="neu-input">
+                <form class="contact-form glass-card reveal" onsubmit="return false">
+                    <h3 class="contact-form__title">Расскажите о проекте</h3>
+                    <p class="contact-form__intro">Мы свяжемся с вами в ближайшее время</p>
+                    <div class="form-group">
                         <input type="text" placeholder="Ваше имя" required>
                     </div>
-                    <div class="neu-input">
+                    <div class="form-group">
                         <input type="text" placeholder="Телефон или email" required>
                     </div>
-                    <div class="neu-input">
+                    <div class="form-group">
                         <textarea placeholder="Расскажите о проекте..." rows="4"></textarea>
                     </div>
                     <label class="contact-form__consent">
                         <input type="checkbox" required>
-                        <span>Я даю согласие на обработку персональных данных и соглашаюсь с условиями: <a href="pages/privacy.html" class="link--accent">Политика конфиденциальности</a></span>
+                        <span>Я даю согласие на обработку персональных данных и соглашаюсь с <a href="pages/privacy.html" class="link--accent">Политикой конфиденциальности</a></span>
                     </label>
-                    <button type="submit" class="btn btn--primary btn--full">ОТПРАВИТЬ</button>
+                    <button type="submit" class="btn btn--primary btn--full">ОТПРАВИТЬ ЗАЯВКУ</button>
                 </form>
 
-                <div class="contacts__info reveal" style="animation-delay:.15s">
-                    <p class="contacts__heading reveal">Для связи с нами напишите нам в соцсетях или позвоните по телефону.</p>
-                    <div class="contacts__phone-card neu-card">
-                        <span class="contacts__phone-label">Позвоните нам</span>
+                <div class="contacts__info reveal" style="animation-delay:.1s">
+                    <div class="contacts__info-block">
+                        <span class="contacts__info-label">Телефон</span>
                         <a href="tel:+998999335333" class="contacts__phone">+998 99 933 53 33</a>
                     </div>
-                    <a href="https://t.me/Javamir" target="_blank" class="btn btn--social btn--telegram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.01 12.01 0 0 0 11.944 0Zm5.581 8.192-1.882 8.867a.792.792 0 0 1-1.14.508l-3.6-2.544-1.944 1.872a.48.48 0 0 1-.456.096l.288-4.08 7.44-6.72c.336-.288-.072-.432-.504-.168l-9.192 5.784-3.96-1.248a.48.48 0 0 1-.024-.888l15.48-5.952a.47.47 0 0 1 .6.336 .482.482 0 0 1-.108.336Z"/></svg>
-                        НАПИСАТЬ В TELEGRAM
-                    </a>
-                    <a href="https://www.instagram.com/re_production.uz/" target="_blank" class="btn btn--social btn--instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
-                        НАПИСАТЬ В INSTAGRAM
-                    </a>
-                    <a href="#" class="btn btn--social btn--vcard">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-                        СОХРАНИТЬ КОНТАКТ
-                    </a>
+                    <div class="contacts__info-block">
+                        <span class="contacts__info-label">Мессенджеры</span>
+                        <div class="contacts__socials">
+                            <a href="https://t.me/Javamir" target="_blank" class="btn btn--social btn--telegram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.01 12.01 0 0 0 11.944 0Zm5.581 8.192-1.882 8.867a.792.792 0 0 1-1.14.508l-3.6-2.544-1.944 1.872a.48.48 0 0 1-.456.096l.288-4.08 7.44-6.72c.336-.288-.072-.432-.504-.168l-9.192 5.784-3.96-1.248a.48.48 0 0 1-.024-.888l15.48-5.952a.47.47 0 0 1 .6.336.482.482 0 0 1-.108.336Z"/></svg>
+                                TELEGRAM
+                            </a>
+                            <a href="https://www.instagram.com/re_production.uz/" target="_blank" class="btn btn--social btn--instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+                                INSTAGRAM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacts__info-block">
+                        <span class="contacts__info-label">Адрес</span>
+                        <p class="contacts__address">Ташкент, Узбекистан</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -419,27 +542,34 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer__inner">
-            <div class="footer__brand">
-                <span class="footer__logo">PRIZMA</span>
-                <p>Воплощаем ваши идеи в реальность!</p>
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <span class="footer__logo">PRIZMA</span>
+                    <p>Воплощаем ваши идеи в реальность!</p>
+                </div>
+                <div class="footer__nav">
+                    <a href="#works">Работы</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#portfolio">Портфолио</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://t.me/Javamir" target="_blank" aria-label="Telegram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.01 12.01 0 0 0 11.944 0Zm5.581 8.192-1.882 8.867a.792.792 0 0 1-1.14.508l-3.6-2.544-1.944 1.872a.48.48 0 0 1-.456.096l.288-4.08 7.44-6.72c.336-.288-.072-.432-.504-.168l-9.192 5.784-3.96-1.248a.48.48 0 0 1-.024-.888l15.48-5.952a.47.47 0 0 1 .6.336.482.482 0 0 1-.108.336Z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/re_production.uz/" target="_blank" aria-label="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LgnoL-kJuT0" target="_blank" aria-label="YouTube">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer__socials">
-                <a href="https://t.me/Javamir" target="_blank" aria-label="Telegram">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.01 12.01 0 0 0 11.944 0Zm5.581 8.192-1.882 8.867a.792.792 0 0 1-1.14.508l-3.6-2.544-1.944 1.872a.48.48 0 0 1-.456.096l.288-4.08 7.44-6.72c.336-.288-.072-.432-.504-.168l-9.192 5.784-3.96-1.248a.48.48 0 0 1-.024-.888l15.48-5.952a.47.47 0 0 1 .6.336 .482.482 0 0 1-.108.336Z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/re_production.uz/" target="_blank" aria-label="Instagram">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/watch?v=LgnoL-kJuT0" target="_blank" aria-label="YouTube">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
-                </a>
-            </div>
-            <div class="footer__links">
-                <a href="pages/privacy.html" class="footer__link">Политика конфиденциальности</a>
-            </div>
-            <div class="footer__copy">
-                &copy; 2024 PRIZMA. Все права защищены.
+            <div class="footer__bottom">
+                <span>&copy; 2025 PRIZMA. Все права защищены.</span>
+                <a href="pages/privacy.html">Политика конфиденциальности</a>
             </div>
         </div>
     </footer>
