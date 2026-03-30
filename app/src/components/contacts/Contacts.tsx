@@ -31,18 +31,18 @@ export function Contacts() {
                   type="text"
                   placeholder="Ваше имя"
                   required
-                  className="w-full px-5 py-3.5 rounded-xl bg-[rgba(255,255,255,0.03)] border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 placeholder:text-text-3"
+                  className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 placeholder:text-text-3"
                 />
                 <input
                   type="text"
                   placeholder="Телефон или email"
                   required
-                  className="w-full px-5 py-3.5 rounded-xl bg-[rgba(255,255,255,0.03)] border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 placeholder:text-text-3"
+                  className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 placeholder:text-text-3"
                 />
                 <textarea
                   placeholder="Расскажите о проекте..."
                   rows={4}
-                  className="w-full px-5 py-3.5 rounded-xl bg-[rgba(255,255,255,0.03)] border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 resize-y placeholder:text-text-3"
+                  className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-text text-[0.88rem] outline-none focus:border-accent focus:shadow-[0_0_0_3px_var(--color-accent-dark)] transition-all duration-300 resize-y placeholder:text-text-3"
                 />
               </div>
 
@@ -58,7 +58,7 @@ export function Contacts() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full text-[0.8rem] font-semibold bg-gradient-to-r from-accent to-accent-2 text-white shadow-[0_4px_20px_var(--color-accent-glow)] hover:shadow-[0_8px_32px_var(--color-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
+                className="w-full py-3.5 rounded-full text-[0.8rem] font-semibold btn-primary shadow-[0_4px_20px_var(--t-accent-glow)] hover:shadow-[0_8px_32px_var(--t-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
               >
                 ОТПРАВИТЬ ЗАЯВКУ
               </button>

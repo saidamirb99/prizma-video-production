@@ -53,17 +53,18 @@ export function Works() {
                   <div
                     className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                     style={{
-                      background: `linear-gradient(135deg, hsl(${p.hue},40%,8%), hsl(${p.hue},30%,16%), hsl(${p.hue},40%,8%))`,
+                      background: `linear-gradient(135deg, hsl(${p.hue},15%,var(--t-placeholder-l1)), hsl(${p.hue},10%,var(--t-placeholder-l2)), hsl(${p.hue},15%,var(--t-placeholder-l1)))`,
                     }}
                   />
                   {/* Play button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
-                    <div className="w-16 h-16 rounded-full bg-accent/20 backdrop-blur-sm border border-accent/30 flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-500">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: 'var(--t-overlay)' }}>
+                    <div className="w-16 h-16 rounded-full backdrop-blur-sm flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-500" style={{ background: 'var(--t-play-bg)', borderWidth: 1, borderColor: 'var(--t-play-border)' }}>
                       <svg
                         width="28"
                         height="28"
                         viewBox="0 0 24 24"
-                        fill="white"
+                        fill="currentColor"
+                        className="text-text"
                       >
                         <polygon points="5,3 19,12 5,21" />
                       </svg>

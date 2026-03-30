@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,9 +35,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${inter.variable} ${syne.variable}`}>
-      <body className="min-h-screen bg-bg text-text antialiased">
+    <html lang="ru" className={`${inter.variable} ${syne.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        />
+      </head>
+      <body className="min-h-screen bg-bg text-text antialiased transition-colors duration-500">
         <SmoothScroll>{children}</SmoothScroll>
+        <ThemeToggle />
       </body>
     </html>
   );

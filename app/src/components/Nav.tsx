@@ -25,7 +25,7 @@ export function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg/85 backdrop-blur-xl border-b border-border py-3"
+          ? "nav-scrolled bg-bg/85 backdrop-blur-xl border-b border-border py-3"
           : "py-5"
       }`}
     >
@@ -57,7 +57,7 @@ export function Nav() {
         <MagneticButton
           as="a"
           href="#contacts"
-          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.75rem] font-semibold tracking-wide bg-gradient-to-r from-accent to-accent-2 text-white shadow-[0_4px_20px_var(--color-accent-glow)] hover:shadow-[0_8px_32px_var(--color-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.75rem] font-semibold tracking-wide btn-primary shadow-[0_4px_20px_var(--t-accent-glow)] hover:shadow-[0_8px_32px_var(--t-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
           strength={0.25}
         >
           Обсудить проект
@@ -88,7 +88,7 @@ export function Nav() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-bg/96 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 z-[999] transition-opacity duration-300 ${
+          className={`fixed inset-0 bg-bg/97 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 z-[999] transition-opacity duration-300 ${
             menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         >
@@ -104,7 +104,7 @@ export function Nav() {
           ))}
           <a
             href="#contacts"
-            className="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-accent to-accent-2 text-white font-semibold text-sm"
+            className="mt-4 px-8 py-3 rounded-full btn-primary font-semibold text-sm"
             onClick={() => setMenuOpen(false)}
           >
             Обсудить проект

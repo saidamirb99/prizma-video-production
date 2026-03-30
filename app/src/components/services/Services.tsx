@@ -52,7 +52,7 @@ export function Services() {
           {services.map((s, i) => (
             <RevealOnScroll key={s.title} delay={i * 0.07}>
               <div className="group text-center p-8 rounded-2xl bg-bg-card border border-border hover:border-border-hover transition-all duration-300">
-                <div className="w-14 h-14 rounded-xl bg-accent-dark flex items-center justify-center mx-auto mb-4 text-accent group-hover:scale-110 group-hover:bg-[rgba(255,107,53,0.2)] transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-accent-dark flex items-center justify-center mx-auto mb-4 text-accent group-hover:scale-110 group-hover:bg-[rgba(255,255,255,0.12)] transition-all duration-300">
                   {s.icon}
                 </div>
                 <h3 className="text-[0.9rem] font-bold mb-2" style={{ fontFamily: "var(--font-syne)" }}>

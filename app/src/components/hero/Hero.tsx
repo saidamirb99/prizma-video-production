@@ -65,8 +65,8 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse 60% 50% at 30% 40%, rgba(255,107,53,0.07) 0%, transparent 60%),
-              radial-gradient(ellipse 50% 40% at 70% 60%, rgba(255,140,90,0.04) 0%, transparent 50%)
+              radial-gradient(ellipse 60% 50% at 30% 40%, var(--t-accent-dark) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 40% at 70% 60%, var(--t-accent-dark) 0%, transparent 50%)
             `,
           }}
         />
@@ -75,8 +75,8 @@ export function Hero() {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              linear-gradient(var(--t-border) 1px, transparent 1px),
+              linear-gradient(90deg, var(--t-border) 1px, transparent 1px)
             `,
             backgroundSize: "60px 60px",
           }}
@@ -100,7 +100,7 @@ export function Hero() {
             style={{ fontFamily: "var(--font-syne)", opacity: 0 }}
           >
             PRI
-            <span className="text-accent drop-shadow-[0_0_30px_rgba(255,107,53,0.4)]">
+            <span className="text-accent drop-shadow-[0_0_30px_var(--t-accent-glow)]">
               Z
             </span>
             MA
@@ -130,7 +130,7 @@ export function Hero() {
             <MagneticButton
               as="a"
               href="#works"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[0.8rem] font-semibold tracking-wide bg-gradient-to-r from-accent to-accent-2 text-white shadow-[0_4px_24px_var(--color-accent-glow)] hover:shadow-[0_8px_40px_var(--color-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[0.8rem] font-semibold tracking-wide btn-primary shadow-[0_4px_24px_var(--t-accent-glow)] hover:shadow-[0_8px_40px_var(--t-accent-glow)] hover:-translate-y-0.5 transition-all duration-300"
             >
               СМОТРЕТЬ РАБОТЫ
               <svg
@@ -164,7 +164,7 @@ export function Hero() {
                   height="80"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="rgba(255,255,255,0.15)"
+                  stroke="var(--t-hero-stroke)"
                   strokeWidth="0.8"
                 >
                   <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />

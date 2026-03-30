@@ -25,7 +25,7 @@ export function Reviews() {
                 <div className="text-accent text-sm tracking-widest mb-4">★★★★★</div>
                 <p className="text-text-2 text-[0.9rem] leading-relaxed italic mb-6 flex-1">&ldquo;{r.text}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent-2 flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ fontFamily: "var(--font-syne)" }}>
+                  <div className="w-10 h-10 rounded-full btn-primary flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ fontFamily: "var(--font-syne)" }}>
                     {r.initial}
                   </div>
                   <div>
